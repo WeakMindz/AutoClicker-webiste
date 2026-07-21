@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <! Weakmindz pofile pic />
+    <a  href="https://github.com/WeakMindz" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+    </a>
+
+    <a class="social-link" href="https://www.youtube.com/@WeakMindz" target="_blank">
+        <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube" />
+    </a>
+
+    <h1>WeamMindz Autocliker</h1>
+    
+    <a href="{{ url_for('download') }}">
+        <button type="button">Download AutoClicker</button>
+    </a>
+
+
+
+
+
+
+    <h2>Features</h2>
+    <p>Adjustable CPS (clicks per second) from 1 to 100 with stepper buttons
+       Normal and Jitter click modes — Jitter adds randomised timing to simulate human behaviour
+       Left, right, and middle mouse button support
+       Click at your current cursor position or lock to a specific screen coordinate
+       Rebindable start/stop hotkeys (default F6 / F7)
+       Dark and light theme toggle
+       Status indicator showing idle or running state
+    </p>
+     
+    <h2>Requirements</h2>
+    <p>Python 3.7 or higher
+       customtkinter
+       pynput</p>
+
+    <h2>Set up steps</h2>
+    <p>First go to the terminal and write "pip install customtkinter pynput".Then Download the file.Lastly type "python main.py" in the terminal and everything should work fine.</p>
+    <h2>More info</h2>
+    <p>CPS
+        Type a number between 1 and 100 into the CPS box, or use the up/down arrows to adjust. This controls how many times per second the auto clicker fires.
+
+        Click Mode
+        Normal — clicks at a steady, fixed interval
+        Jitter — adds up to ±20% random variance between clicks to mimic natural human input
+        Mouse Button
+        Choose between Left, Right, or Middle click. The selected button is highlighted in blue.
+
+        Click Location
+        Current position — the clicker fires wherever your cursor is at the time of each click
+        Pick location — press the Pick button, the window minimises, then click anywhere on your screen to lock the clicker to those exact coordinates. The X and Y values will display in the app.
+        Hotkeys
+        By default, F6 starts the clicker and F7 stops it. To rebind:
+
+        Click the green Start or red Stop hotkey button
+        It will flash yellow and say "Press any key…"
+        Press any key on your keyboard — it binds immediately
+        Hotkeys work even when the app is not in focus, so you can start and stop clicking without switching windows.
+
+        Start / Stop Buttons
+        The green Start button and red Stop button at the bottom also control the clicker directly.
+
+        Project Structure
+        main.py      — Full application (UI + click logic + hotkeys)
+        README.md    — This file
+        Troubleshooting
+        The clicker does nothing when I press Start Make sure pynput is installed: pip install pynput
+
+        Hotkeys don't work Some systems require elevated permissions for global keyboard hooks. Try running the script as administrator (Windows) or with sudo (Linux/macOS).
+
+        Pick location doesn't work The window minimises briefly while waiting for your click. If it doesn't restore, click the taskbar icon to bring it back — the coordinates should still have been captured.
+
+        The app crashes on start Ensure you are on Python 3.7+ and have both customtkinter and pynput installed.</p>
+</body>
+</html>
